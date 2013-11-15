@@ -1,18 +1,18 @@
 /**
  * 
  */
-package com.nc.ws.metro;
+package com.nc.ws.axis2;
 
 /**
- * @author ibm
- *
+ * @author Nirmalya
+ * 
  */
 public class Client {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		// TODO Auto-generated method stub
 
 	}

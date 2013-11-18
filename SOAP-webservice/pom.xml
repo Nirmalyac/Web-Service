@@ -8,8 +8,12 @@
   <name>SOAP-webservice</name>
 
   <modules>
+	<module>Domain</module>
 	<module>Producer</module>
 	<module>Consumers</module>
+	<module>Publisher</module>
+	<module>CardProfiler</module>
+	<module>SOAPFaults</module>
   </modules>
   
  <build>

@@ -2,7 +2,12 @@
 <projectDescription>
   <name>WSProducerImpl</name>
   <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-  <projects/>
+  <projects>
+    <project>WSProducerIntf</project>
+    <project>WSDomain</project>
+    <project>CardProfiler</project>
+    <project>SOAPFaults</project>
+  </projects>
   <buildSpec>
     <buildCommand>
       <name>org.eclipse.jdt.core.javabuilder</name>

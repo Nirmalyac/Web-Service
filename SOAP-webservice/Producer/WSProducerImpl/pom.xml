@@ -16,8 +16,23 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.nc.ws.intf</groupId>
+    	<artifactId>WSProducerIntf</artifactId>
+    	<version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.nc.ws.businessRules</groupId>
+    	<artifactId>CardProfiler</artifactId>
+    	<version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.nc.ws.faults</groupId>
+    	<artifactId>SOAPFaults</artifactId>
+    	<version>1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
 	<groupId>javax</groupId>

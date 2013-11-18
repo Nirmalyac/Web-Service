@@ -14,6 +14,7 @@ import com.nc.ws.domain.Status;
 public class ProfileCardHolders {
 
 	public CardHolder profile(final CardHolder cardHolder) {
+		System.out.println("Started profiling ");
 
 		double creditLimit = 0;
 
@@ -21,7 +22,7 @@ public class ProfileCardHolders {
 
 			creditLimit = creditLimit + card.getCreditLimit();
 		}
-
+		System.out.println("Setting risk profile");
 		return setRiskProfile(cardHolder, creditLimit);
 	}
 
@@ -29,30 +30,33 @@ public class ProfileCardHolders {
 			final double creditLimit) {
 
 		cardHolder.setOverallCreditLimit(creditLimit);
-
+		System.out.println("cardHolder.getAnnualIncome() -->"
+				+ cardHolder.getAnnualIncome());
+		System.out.println("cardHolder.getOverallCreditLimit() -->"
+				+ cardHolder.getOverallCreditLimit());
 		if (cardHolder.getAnnualIncome() < cardHolder.getOverallCreditLimit()) {
-
+			System.out.println("High Risk");
 			setRiskStatusOfCardHolder(cardHolder, Status.HIGH_RISK);
 		}
 
 		if (between(cardHolder.getOverallCreditLimit(),
 				0.6 * cardHolder.getAnnualIncome(),
 				0.8 * cardHolder.getAnnualIncome())) {
-
+			System.out.println("Moderate Risk");
 			setRiskStatusOfCardHolder(cardHolder, Status.MODERATE_RISK);
 		}
 
 		if (between(cardHolder.getOverallCreditLimit(),
 				0.4 * cardHolder.getAnnualIncome(),
 				0.6 * cardHolder.getAnnualIncome())) {
-
+			System.out.println("Normal Risk");
 			setRiskStatusOfCardHolder(cardHolder, Status.NORMAL);
 		}
 
 		if (between(cardHolder.getOverallCreditLimit(),
 				0.2 * cardHolder.getAnnualIncome(),
 				0.4 * cardHolder.getAnnualIncome())) {
-
+			System.out.println("Low Risk");
 			setRiskStatusOfCardHolder(cardHolder, Status.LOW_RISK);
 		}
 
@@ -76,5 +80,6 @@ public class ProfileCardHolders {
 		cardHolder.setStatus(status);
 		cardHolder.setMessage("The risk profile of the " + cardHolder.getName()
 				+ " is : " + status.toString());
+		System.out.println(cardHolder.getMessage());
 	}
 }

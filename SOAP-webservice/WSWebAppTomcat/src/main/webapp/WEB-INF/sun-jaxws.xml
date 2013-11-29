@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+	version="2.0">
+	<endpoint name="DOCLIT"
+		implementation="com.nc.ws.impl.CardHolderProfileDOCLITServiceImpl"
+		url-pattern="/doclit" />
+
+	<endpoint name="RPCLIT"
+		implementation="com.nc.ws.impl.CardHolderProfileRPCLITServiceImpl"
+		url-pattern="/rpclit" />
+
+	<endpoint name="RPCENC"
+		implementation="com.nc.ws.impl.CardHolderProfileRPCENCServiceImpl"
+		url-pattern="/rpcenc" />
+</endpoints>

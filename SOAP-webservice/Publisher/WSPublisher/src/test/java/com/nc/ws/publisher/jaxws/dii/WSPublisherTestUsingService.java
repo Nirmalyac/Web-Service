@@ -52,6 +52,14 @@ public class WSPublisherTestUsingService {
 
 	}
 
+	@AfterClass
+	public static void cleanUp() {
+
+		epForDOCLIT.stop();
+		epForRPCLIT.stop();
+		epForRPCENC.stop();
+	}
+
 	/**
 	 * Bean Validation works.
 	 * 
@@ -137,14 +145,6 @@ public class WSPublisherTestUsingService {
 		ch.getCards().add(
 				getCard(3, "BNP", "John Brian", "Visa", "05-03-2018", 3000));
 		return ch;
-	}
-
-	@AfterClass
-	public static void cleanUp() {
-
-		epForDOCLIT.stop();
-		epForRPCLIT.stop();
-		epForRPCENC.stop();
 	}
 
 	private CardHolder getCardHolder(final int id, final String name,

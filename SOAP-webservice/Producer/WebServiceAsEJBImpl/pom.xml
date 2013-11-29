@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>SOAP-webservice</groupId>
+		<artifactId>Producer</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.nc.ws.ejb</groupId>
+	<artifactId>WebServiceAsEJBImpl</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>WebServiceAsEJBImpl</name>
+	<packaging>ejb</packaging>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		
+		<dependency>
+			<groupId>com.nc.ws.ejb.intf</groupId>
+			<artifactId>WebServiceAsEjbIntf</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.nc.ws.domain</groupId>
+			<artifactId>WSDomain</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nc.ws.businessRules</groupId>
+			<artifactId>CardProfiler</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <configuration>
+                    <ejbVersion>3.1</ejbVersion>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+
+</project>
